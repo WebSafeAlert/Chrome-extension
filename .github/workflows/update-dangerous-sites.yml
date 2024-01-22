@@ -1,0 +1,25 @@
+# .github/workflows/update-dangerous-sites.yml
+
+name: Update Dangerous Sites
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-dangerous-sites:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update dangerous sites
+        run: |
+          echo "https://raw.githubusercontent.com/${{ github.repository }}/main/blacklist.txt" > public_url.txt
+          echo "::set-output name=public_url::$(cat public_url.txt)"
+        id: update
+
+      - name: Display public URL
+        run: echo "Dangerous sites file is available at ${{ steps.update.outputs.public_url }}"
