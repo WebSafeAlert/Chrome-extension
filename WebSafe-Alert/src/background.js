@@ -26,3 +26,12 @@ async function getDangerousSitesFromGitHub() {
     updateDangerousSites();
   });
   
+  function showWarning() {
+    alert("Attention : Vous êtes sur un site potentiellement dangereux.");
+  }
+  
+  chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.type === 'showWarning') {
+      showWarning();
+    }
+  });
