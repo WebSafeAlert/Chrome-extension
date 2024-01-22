@@ -1,9 +1,10 @@
 async function getDangerousSitesFromGitHub() {
-    const githubRepo = 'Chrome-extension';
-    const githubFilePath = 'dangerous-sites.txt';
+    const githubRepo = 'WebSafeAlert/Chrome-extension';
+    const githubFilePath = 'blacklist.txt';
+    const githubRawURL = `https://raw.githubusercontent.com/${githubRepo}/main/${githubFilePath}`;
   
     try {
-      const response = await fetch(`https://raw.githubusercontent.com/${githubRepo}/main/${githubFilePath}`);
+      const response = await fetch(githubRawURL);
       const data = await response.text();
       const dangerousSites = data.split('\n').map(site => site.trim());
       return dangerousSites;
