@@ -1,37 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "WebSafe-Alert",
-    "version": "1.0",
-    "description": "Community-driven web safety.",
-    "permissions": [
-        "webNavigation",
-        "storage"
-    ],
-    "host_permissions": [
-        "https://*/*",
-        "http://*/*"
-    ], 
-    "action": {
-      "default_icon": {
-        "16": "images/ico.png",
-        "48": "images/ico.png",
-        "128": "images/ico.png"
-      },
-      "default_title": "WebSafe-Alert"
+  "manifest_version": 3,
+  "name": "WebSafe-Alert",
+  "version": "1.0",
+  "description": "Community-driven web safety.",
+  "permissions": ["notifications", "webRequest", "webNavigation"],
+  "background": {
+  "service_worker": "WebSafe-Alert/src/background.js",
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "default_popup": "WebSafe-Alert/src/index.html"
+  },
+  "action": {
+    "default_icon": {              
+      "16": "images/ico.png",
+      "24": "images/ico.png",
+      "32": "images/ico.png"
     },
-    "background": {
-      "service_worker": "WebSafe-Alert/src/background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["WebSafe-Alert/src/content.js"]
-      }
-    ],
-    "storage": {
-      "sync": {
-        "dangerousSites": []
-      }
-    }
+    "default_title": "Click Me",
+    "default_popup": "WebSafe-Alert/src/index.html"
   }
-  
+}
