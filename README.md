@@ -1,4 +1,9 @@
 # WebSafe-Alert
+
+![GitHub last commit](https://img.shields.io/github/last-commit/WebSafeAlert/Chrome-extension?style=for-the-badge)
+![GitHub license](https://img.shields.io/github/license/WebSafeAlert/Chrome-extension?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/WebSafeAlert/Chrome-extension?style=for-the-badge)
+
 ## Une Extension pour un Internet plus Sécurisé
 
 WebSafe-Alert est bien plus qu'une simple extension de navigateur. C'est une initiative communautaire dédiée à renforcer la sécurité en ligne et à protéger les utilisateurs des dangers potentiels du monde virtuel. Nous croyons en la puissance de la communauté pour façonner un Internet plus sûr et plus fiable.
@@ -20,5 +25,14 @@ WebSafe-Alert n'est pas seulement une extension, c'est un effort collectif. Nous
 
 ## Licence
 WebSafe-Alert est distribué sous la licence MIT, encourageant la collaboration et la création d'une communauté tournée vers la sécurité en ligne.
+
+## Installation Rapide
+Pour installer WebSafe-Alert, suivez ces étapes simples :
+1. Téléchargez l'extension à partir du [Chrome Web Store](lien-vers-le-store).
+2. Activez l'extension dans les paramètres de votre navigateur.
+3. Parcourez le web en toute sécurité !
+
+## Captures d'écran
+![Capture d'écran de WebSafe-Alert](lien-vers-capture-d-ecran.png)
 
 Ensemble, construisons un Internet plus sûr avec WebSafe-Alert.
